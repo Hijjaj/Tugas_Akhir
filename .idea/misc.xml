@@ -4,11 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/TugasAkhir/app/src/main/res/layout/activity_buatresto.xml" value="0.22" />
-        <entry key="..\:/TugasAkhir/app/src/main/res/layout/activity_lihatresto.xml" value="0.33" />
-        <entry key="..\:/TugasAkhir/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/TugasAkhir/app/src/main/res/layout/activity_updateresto.xml" value="0.33" />
-        <entry key="..\:/TugasAkhir/app/src/main/res/layout/content_main.xml" value="0.1" />
-        <entry key="..\:/TugasAkhir/app/src/main/res/menu/menu.xml" value="0.22" />
+        <entry key="..\:/TugasAkhir/app/src/main/res/layout/activity_lihatresto.xml" value="0.22" />
+        <entry key="..\:/TugasAkhir/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/TugasAkhir/app/src/main/res/layout/activity_updateresto.xml" value="0.22" />
+        <entry key="..\:/TugasAkhir/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/TugasAkhir/app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
     </option>
   </component>

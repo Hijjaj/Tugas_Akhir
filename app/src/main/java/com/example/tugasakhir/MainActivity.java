@@ -2,6 +2,8 @@ package com.example.tugasakhir;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.view.MenuItemCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,9 +19,13 @@ import android.widget.ListView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
     String[] daftar;
     ListView ListView01;
+    ListView Tampil;
     Menu menu;
     protected Cursor cursor;
     DataHelper dbcenter;
@@ -44,15 +50,20 @@ public class MainActivity extends AppCompatActivity {
         RefreshList();
     }
 
+
+
     public void RefreshList() {
         SQLiteDatabase db = dbcenter.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM daerah", null);
+        Tampil = (ListView) findViewById(R.id.listView1);
+
         daftar = new String[cursor.getCount()];
         cursor.moveToFirst();
         for (int cc = 0; cc < cursor.getCount(); cc++) {
             cursor.moveToPosition(cc);
             daftar[cc] = cursor.getString(1).toString();
         }
+
         ListView01 = (ListView) findViewById(R.id.listView1);
         ListView01.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
         ListView01.setSelected(true);
@@ -94,14 +105,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
+
+        MenuItem searchItem = menu.findItem(R.id.item_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        searchView.setQueryHint("Cari nama daerah");
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                ArrayList<String> templist = new ArrayList<>();
+                for(String temp : daftar){
+                    if(temp.toLowerCase().contains(newText.toLowerCase())){
+                        templist.add(temp);
+                    }
+                }
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity
+                .this, android.R.layout.simple_list_item_1, templist);
+                ListView01.setAdapter(adapter);
+
+                return true;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
+
+
 }

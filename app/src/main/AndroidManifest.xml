@@ -11,15 +11,15 @@
         android:theme="@style/Theme.TugasAkhir">
         <activity
             android:name=".lihatresto"
-            android:label="Resto"
+            android:label="Daftar Resto"
             android:exported="false" />
         <activity
             android:name=".updateresto"
-            android:label="Resto"
+            android:label="Update Info Resto"
             android:exported="false" />
         <activity
             android:name=".buatresto"
-            android:label="Resto"
+            android:label="Tambah Resto"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

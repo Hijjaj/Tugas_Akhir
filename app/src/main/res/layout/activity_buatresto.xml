@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/purple_200"
     android:layout_height="match_parent"
     tools:context=".buatresto">
 
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_alignLeft="@+id/textView1"
+        android:hint="Masukkan Nomor"
         android:inputType="number"
         android:maxLength="10">
 
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
+        android:hint="Masukkan Daerahnya"
         android:inputType="text"
         android:maxLength="20"/>
 
@@ -59,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
+        android:hint="Masukkan Nama Resto"
         android:inputType="text"/>
 
     <TextView
@@ -94,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView5"
         android:layout_below="@+id/textView5"
+        android:hint="Masukkan Menu sampingan"
         android:maxLength="100"
         android:inputType="text"/>
 

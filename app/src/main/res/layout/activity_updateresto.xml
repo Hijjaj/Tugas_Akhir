@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     tools:context=".updateresto">
 
     <EditText
@@ -10,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
+        android:hint="Ganti Nomor"
         android:layout_alignLeft="@+id/textView1"
         android:inputType="number"
         android:maxLength="10">
@@ -42,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
+        android:hint="Ganti Daerah"
         android:inputType="text"
         android:maxLength="20"/>
 
@@ -61,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
+        android:hint="Ganti Nama Resto"
         android:inputType="date"/>
 
     <TextView
@@ -79,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView4"
         android:layout_alignLeft="@+id/textView4"
-        android:hint="menu yang diunggulkan"
+        android:hint="Gantin Menu Unggulan"
         android:inputType="text" />
 
     <TextView
@@ -99,6 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView5"
+        android:hint="Ganti Menu Sampingan"
         android:layout_below="@+id/textView5" />
 
     <Button
